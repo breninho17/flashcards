@@ -48,3 +48,18 @@ footer p {
 .cartao:hover .cartao__comteudo{
     transform: rotateY(180dem);
 }
+.cartao__comteudo__pergunta ,
+.cartao__comteudo__pergunta{
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.cartao__comteudo__resposta{
+    transform: rotateY(180deg);
+}
+.cartao__comteudo p{
+    margin-top: 1rem;
+    padding: 2rem;
+    margin-top: 4rem;
+}
