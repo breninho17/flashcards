@@ -45,3 +45,6 @@ footer p {
     border-radius: 0.6rem;
     font-size: 1vw;
 }
+.cartao:hover .cartao__comteudo{
+    transform: rotateY(180dem);
+}
