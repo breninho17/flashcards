@@ -1,65 +1,84 @@
 body {
-    background-color: bisque;
-    font-family: Bai Jamjuree;
-}
-
-footer {
+    background-color: rgb(203, 196, 255);
+    font-family: 'Bai Jamjuree', sans-serif;
+    }
+    
+    footer {
     background-color: black;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 0.2rem;
-}
-
-footer p {
+    }
+    
+    footer p {
     text-align: center;
     font-size: 0.6rem;
     margin-top: 0.5rem;
-}
-
-#container {
+    }
+    
+    #container {
     display: flex;
-}
-
-.cartao {
-    margin: 1rem 1rem;
-    background-color: aqua;
-    height: 20rem;
-    flex-grow: 1;
-    flex-basis: calc(33% -6rem);
-}
-
-.cartao__comteudo {
-    text-align: center;
-    background-color: aquamarine;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    
+    .cartao {
+    margin: 1rem;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    }
+    
+    .cartao__conteudo {
+    position: relative;
+    width: 100%;
     height: 100%;
-}
-
-.cartao__comteudo h3 {
-    background-color: tomato;
-    text-align: left;
-    padding: 0.5rem;
-    position: absolute;
-    margin: 0.6rem;
-    border-radius: 0.6rem;
-    font-size: 1vw;
-}
-.cartao:hover .cartao__comteudo{
-    transform: rotateY(180dem);
-}
-.cartao__comteudo__pergunta ,
-.cartao__comteudo__pergunta{
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+    }
+    
+    .cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+    }
+    
+    .cartao__conteudo__pergunta,
+    .cartao__conteudo__resposta {
     backface-visibility: hidden;
     position: absolute;
-    height: 100%;
     width: 100%;
-}
-.cartao__comteudo__resposta{
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .cartao__conteudo__resposta {
     transform: rotateY(180deg);
-}
-.cartao__comteudo p{
-    margin-top: 1rem;
-    padding: 2rem;
-    margin-top: 4rem;
-}
+    }
+    
+    
+    .cartao__conteudo h3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: tomato;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    color: white;
+    border-radius: 0.6rem;
+    font-size: 1vw;
+    backface-visibility: hidden;
+    }
+    
+    .cartao__conteudo p {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    }
